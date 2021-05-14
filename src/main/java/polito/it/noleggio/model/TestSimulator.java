@@ -9,16 +9,18 @@ public class TestSimulator {
 	public static void main(String args[]) {
 		Simulator sim = new Simulator();
 		
-		sim.setNumCars(10) ;
+		sim.setNumCars(10) ; //imposto il numero di auto totali
 		sim.setClientFrequency(Duration.of(10, ChronoUnit.MINUTES)) ;
+		//imposto la frequenza di arrivo dei clienti
 		
-		sim.run() ;
+		sim.run() ; //parte la simulazione
 		
+		//parametri richiesti dall'esercizio
 		int totClients = sim.getTotClients() ;
 		int dissatisfied = sim.getDissatisfied() ;
 		
 		System.out.format("Arrived %d clients, %d were dissatisfied\n", 
-				totClients, dissatisfied);
+			totClients, dissatisfied);
 	}
 	
 }
